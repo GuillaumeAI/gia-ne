@@ -1,0 +1,32 @@
+{
+  "name": "gia-ne",
+  "version": "0.1.0",
+  "description": "CLI wrapper for Image Neurally Enhanced using containerized infrastructure",
+  "main": "csm",
+  "scripts": {
+    "test": "node gia-ne.js sample.jpg"
+  },
+  "bin": {
+    "gia-ne": "gia-ne.js"
+  },
+  "repository": {
+    "bugs": "https://github.com/GuillaumeAI/gia-ne/issues",
+    "type": "git",
+    "url": "https://github.com/GuillaumeAI/gia-ne/tree/main/gia-ne",
+    "directory": "/gis-csm"
+  },
+  "keywords": [
+    "neural-enhancement","image",
+    "cli"
+  ],
+  "author": "Guillaume Descoteaux-Isabelle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GuillaumeAI/gia-ne/issues"
+  },
+  "homepage": "https://github.com/GuillaumeAI/gia-ne#readme",
+  "dependencies": {
+    "node-cmd": "^4.0.0",
+    "node-powershell": "^4.0.0"
+  }
+}
