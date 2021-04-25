@@ -19,14 +19,14 @@ var resolve = path.resolve;
 
 var os = process.platform;
 
-var script_dir = path.dirname( process.argv[1]);
-var pVersion = require( path.join(script_dir,'package.json')).version;
+// var script_dir = path.dirname( process.argv[1]);
+// var pVersion = require( path.join(script_dir,'package.json')).version;
 console.log(`---------------------------------
 GuillaumeAI Neural Enhancement for Images 
 by Guillaume Descoteaux-Isabelle(2021)
-Version ${pVersion}
 ---------------------------------
 `);
+// Version ${pVersion}
 
 //process.exit(1);
 var myArgs = process.argv.slice(2);
