@@ -137,7 +137,7 @@ Running: " + ${cmdToRun}
       .then(output => {
         console.log(output);
         console.log("--Win32 Issue:  You can press CTRL+C to break back to terminal at any time");
-        
+
         console.log(`Process was launch is background successfully.`);
       })
       .catch(err => {
@@ -173,5 +173,5 @@ Running: " + ${cmdToRun}
 
 function consoleIfNOTQuieter(msg)
 {
-  if (quieterMode)console.log(msg);
+  if (!quieterMode)console.log(msg);
 }
