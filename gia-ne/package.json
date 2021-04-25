@@ -1,6 +1,6 @@
 {
   "name": "gia-ne",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "CLI wrapper for Image Neurally Enhanced using containerized infrastructure",
   "main": "csm",
   "scripts": {
