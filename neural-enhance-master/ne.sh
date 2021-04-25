@@ -9,4 +9,4 @@ fbnameTMP=${fname%.*}
 
 #echo convert $fbnameTMP'_ne'$1'x.png' --quality $2 $fbnameTMP.jpg
 #convert $fbnameTMP'_ne'$1'x.png' --quality $2 $fbnameTMP.jpg
-echo "Convertion to JPG is currently bugged, skipping..."
+#echo "Convertion to JPG is currently bugged, skipping..."
