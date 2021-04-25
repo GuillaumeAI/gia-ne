@@ -1,11 +1,11 @@
 {
   "name": "gia-ne",
-  "version": "0.1.9",
+  "version": "0.1.11",
   "description": "CLI wrapper for Image Neurally Enhanced using containerized infrastructure",
   "main": "csm",
   "scripts": {
     "test": "node gia-ne.js sample.jpg",
-    "versionpublish": "npm version patch && npm publish ; npm push"
+    "versionpublish": "npm version patch ; npm publish ; git push"
   },
   "bin": {
     "gia-ne": "gia-ne.js"
