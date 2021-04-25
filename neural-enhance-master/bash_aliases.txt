@@ -1,0 +1,2 @@
+alias ne2x=/ne/ne2x.sh
+alias ne4x=/ne/ne4x.sh
