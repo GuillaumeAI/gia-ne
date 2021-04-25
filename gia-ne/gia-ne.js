@@ -16,6 +16,9 @@ var path = require('path');
 const { exit } = require('process');
 var resolve = path.resolve;
 
+var tlid = require('tlid');
+var nowtlid = tlid.get();
+var containerName = `gia-ne__${nowtlid}`;
 
 var os = process.platform;
 
@@ -110,7 +113,7 @@ function make_docker_cmd(output) {
   var outPath = arr[1];
 
   var cmdToRun =
-    `docker run -d -t --rm ` +
+    `docker run -d -t --rm  --name  gia_ne ${containerName} ` +
     `-v ${inPath.trim()}:${mount_in} ` +
     `-v ${outPath.trim()}:${mount_out}  ` +
     `${container_tag}  ` +
