@@ -11,25 +11,41 @@ var mount_out = "/out";
 
 //@STCGoal  what comes next is up for GIA-NE
 //@STCSTatus A copy of GIS-CSM
-console.log("This programm will receive one argument and enhance the image or the whole folder if that is a folder.");
+console.log(`---------------------------------
+GuillaumeAI Neural Enhancement for Images
+by Guillaume Descoteaux-Isabelle, 2021
+---------------------------------
+`);
 
 
 var os = process.platform;
 
 var myArgs = process.argv.slice(2);
 
-var target_file = myArgs[0].replace(".\\","");
+var target_file ="";
+if (myArgs[0])target_file = myArgs[0].replace(".\\","");
+else {
+  console.log(`
+  Must specify argument file and optionally zoom factor
+  gia-ne [file] ([zoomFactor:2,4])
+  gia-ne sample.jpg
+  gia-ne sample.jpg 4
+  `);
+  exit(1);
+}
 
-
+var quieterMode = false;
 //----ZOOM FACTOR
 var zoomFactor = 2;
-if (myArgs[1]) zoomFactor= myArgs[1];
+if (myArgs[1] && myArgs[1] == 4) zoomFactor= myArgs[1];
+if (myArgs[1] && (myArgs[1] == "--quiet" || myArgs[2] == "--quiet" )) quieterMode = true;
+
 var ne2xScript = "/ne/ne2x.sh";
 var ne4xScript = "/ne/ne4x.sh";
 var currentScript = ne2xScript;
 if (zoomFactor == 4) 
   currentScript = ne4xScript;
-console.log("Zoom Factor: " + zoomFactor);
+consoleIfNOTQuieter("Zoom Factor: " + zoomFactor);
 
 var path = require('path');
 const { exit } = require('process');
@@ -101,9 +117,11 @@ function make_docker_cmd(output) {
 
 function platform_run(cmdToRun) {
 //exit(1);
-console.log("-----------------");
-  console.log("Running: " + cmdToRun);
-  console.log("  on platform: " + os);
+consoleIfNOTQuieter(`
+-----------------
+Running: " + ${cmdToRun}
+  on platform: " + ${os}
+`);
 
   if (os == "win32") {
     //running context will use Powershell to run docker
@@ -138,8 +156,15 @@ console.log("-----------------");
 
   }
 
-  console.log(`---------------------------
+  consoleIfNOTQuieter(`---------------------------
   Container is working in background and will stop when done :)`);
-  console.log(` your result will be : ${target_file}
+  consoleIfNOTQuieter(` your result will be : ${target_file}
   ---------------------------------------`);
+}
+
+
+
+function consoleIfNOTQuieter(msg)
+{
+  if (quieterMode)console.log(msg);
 }
