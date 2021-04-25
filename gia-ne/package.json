@@ -1,6 +1,6 @@
 {
   "name": "gia-ne",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "CLI wrapper for Image Neurally Enhanced using containerized infrastructure",
   "main": "csm",
   "scripts": {
@@ -16,7 +16,8 @@
     "directory": "/gia-ne"
   },
   "keywords": [
-    "neural-enhancement","image",
+    "neural-enhancement",
+    "image",
     "cli"
   ],
   "author": "Guillaume Descoteaux-Isabelle",

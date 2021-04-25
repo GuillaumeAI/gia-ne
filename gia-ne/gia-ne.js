@@ -52,9 +52,9 @@ const { exit } = require('process');
 var resolve = path.resolve;
 var target_file_name_only = path.basename(target_file);
 var target_dir = path.dirname(target_file);
-console.log(target_dir);
-console.log(target_file);
-console.log(target_file_name_only);
+//console.log(target_dir);
+//console.log(target_file);
+//console.log(target_file_name_only);
 //process.exit(0);
 
 if (os == "win32") {
