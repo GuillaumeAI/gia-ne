@@ -4,8 +4,7 @@
   "description": "CLI wrapper for Image Neurally Enhanced using containerized infrastructure",
   "main": "csm",
   "scripts": {
-    "test": "node gia-ne.js sample.jpg",
-    "versionpublish": "npm version patch ; npm publish ; git push"
+    "test": "node gia-ne.js sample.jpg"
   },
   "bin": {
     "gia-ne": "gia-ne.js"
