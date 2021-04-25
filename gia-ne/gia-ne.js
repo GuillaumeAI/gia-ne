@@ -107,7 +107,8 @@ function make_docker_cmd(output) {
     `-v ${inPath.trim()}:${mount_in} ` +
     `-v ${outPath.trim()}:${mount_out}  ` +
     `${container_tag}  ` +
-    `${target_file_name_only}`;
+    `${target_file_name_only} ` +
+    `${zoomFactor}`;
 
     //console.log(cmdToRun);
 
