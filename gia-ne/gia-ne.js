@@ -137,6 +137,8 @@ Running: " + ${cmdToRun}
       .then(output => {
         console.log(output);
         console.log("--Win32 Issue:  You can press CTRL+C to break back to terminal at any time");
+        
+        console.log(`Process was launch is background successfully.`);
       })
       .catch(err => {
         console.log(err);
@@ -149,7 +151,12 @@ Running: " + ${cmdToRun}
     cmd.run(
       cmdToRun,
       function (err, data, stderr) {
-        console.log(data);
+        if (err) console.log(err);
+        else {
+          console.log(data);
+          console.log(`Process was launch is background successfully.`);
+
+        }
 
       }
     );
