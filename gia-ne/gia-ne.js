@@ -11,15 +11,24 @@ var mount_out = "/out";
 
 //@STCGoal  what comes next is up for GIA-NE
 //@STCSTatus A copy of GIS-CSM
-console.log(`---------------------------------
-GuillaumeAI Neural Enhancement for Images
-by Guillaume Descoteaux-Isabelle, 2021
----------------------------------
-`);
+
+var path = require('path');
+const { exit } = require('process');
+var resolve = path.resolve;
 
 
 var os = process.platform;
 
+var script_dir = path.dirname( process.argv[1]);
+var pVersion = require( path.join(script_dir,'package.json')).version;
+console.log(`---------------------------------
+GuillaumeAI Neural Enhancement for Images 
+by Guillaume Descoteaux-Isabelle(2021)
+Version ${pVersion}
+---------------------------------
+`);
+
+//process.exit(1);
 var myArgs = process.argv.slice(2);
 
 var target_file ="";
@@ -47,9 +56,6 @@ if (zoomFactor == 4)
   currentScript = ne4xScript;
 consoleIfNOTQuieter("Zoom Factor: " + zoomFactor);
 
-var path = require('path');
-const { exit } = require('process');
-var resolve = path.resolve;
 var target_file_name_only = path.basename(target_file);
 var target_dir = path.dirname(target_file);
 //console.log(target_dir);
