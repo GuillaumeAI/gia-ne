@@ -13,7 +13,7 @@
     "bugs": "https://github.com/GuillaumeAI/gia-ne/issues",
     "type": "git",
     "url": "https://github.com/GuillaumeAI/gia-ne/tree/main/gia-ne",
-    "directory": "/gis-csm"
+    "directory": "/gia-ne"
   },
   "keywords": [
     "neural-enhancement","image",

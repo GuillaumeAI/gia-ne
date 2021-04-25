@@ -8,23 +8,26 @@ Vision: A Neural Enhancement for images encapsulated into a docker container and
 # Run from directory where all your files are
 ```sh
 gia-ne fileToEnhance.jpg
+gia-ne fileToEnhance.jpg 4 # zoomFactor of 4 (default 2)
+
 # It will start the docker container in bg to do its work
 ```
 # Install
 
 ```sh
 npm i gia-ne --g
-docker pull guillaumeai/ne
+docker pull guillaumeai/ne:latest
 ```
 
 # Dependencies
 
 * Docker
+* NodeJS (obviously ;) )
 
 
 ----
 
 # Further research
 
-* Use this project as a model to build Command Wrapper for Containerized infrastructure
+* Colorization Neural Enhancement
 

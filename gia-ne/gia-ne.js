@@ -5,7 +5,7 @@
  
  * Current Reality: 
  */
-var container_tag = "guillaumeai/ne:210419";
+var container_tag = "guillaumeai/ne:latest";
 var mount_in = "/ne/input";
 var mount_out = "/out";
 
