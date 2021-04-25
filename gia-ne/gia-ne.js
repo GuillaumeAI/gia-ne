@@ -18,7 +18,7 @@ var os = process.platform;
 
 var myArgs = process.argv.slice(2);
 
-var target_file = myArgs[0];
+var target_file = myArgs[0].replace(".\\","");
 
 
 //----ZOOM FACTOR
@@ -93,14 +93,15 @@ function make_docker_cmd(output) {
     `${container_tag}  ` +
     `${target_file_name_only}`;
 
-    console.log(cmdToRun);
+    //console.log(cmdToRun);
 
   platform_run(cmdToRun);
 
 }
 
 function platform_run(cmdToRun) {
-exit(1);
+//exit(1);
+console.log("-----------------");
   console.log("Running: " + cmdToRun);
   console.log("  on platform: " + os);
 
