@@ -5,6 +5,11 @@
  
  * Current Reality: 
  */
+const startNameCredit = `---------------------------------
+GuillaumeAI Neural Enhancement for Images 
+by Guillaume Descoteaux-Isabelle(2021/4/26)
+---------------------------------
+`;
 var container_tag = "docker.io/guillaumeai/ne";
 var mount_in = "/ne/input";
 var mount_out = "/out";
@@ -25,11 +30,7 @@ var os = process.platform;
 // var script_dir = path.dirname( process.argv[1]);
 // var pVersion = require( path.join(script_dir,'package.json')).version;
 
-console.log(`---------------------------------
-GuillaumeAI Neural Enhancement for Images 
-by Guillaume Descoteaux-Isabelle(2021)
----------------------------------
-`);
+console.log(startNameCredit);
 // Version ${pVersion}
 
 //process.exit(1);
