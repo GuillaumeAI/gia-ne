@@ -5,7 +5,7 @@
  
  * Current Reality: 
  */
-var container_tag = "guillaumeai/ne:latest";
+var container_tag = "docker.io/guillaumeai/ne";
 var mount_in = "/ne/input";
 var mount_out = "/out";
 
