@@ -113,7 +113,7 @@ function make_docker_cmd(output) {
   var outPath = arr[1];
 
   var cmdToRun =
-    `docker run -d -t --rm  --name  gia_ne ${containerName} ` +
+    `docker run -d -t --rm  --name  ${containerName} ` +
     `-v ${inPath.trim()}:${mount_in} ` +
     `-v ${outPath.trim()}:${mount_out}  ` +
     `${container_tag}  ` +
