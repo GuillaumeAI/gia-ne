@@ -4,6 +4,10 @@ CLI wrapper for Image Neurally Enhanced using containerized infrastructure
 
 Vision: A Neural Enhancement for images encapsulated into a docker container and wrapped for multiplatform by nodeJS
 
+## ORIGINAL MIGRATION LINK
+[see nad.previz](https://github.com/jgwill/nad.previz/blob/master/x/x__enhance_neural__2010270143/README.md#L7) repo for where this project has started
+
+----
 
 # Run from directory where all your files are
 ```sh
