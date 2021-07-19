@@ -1,6 +1,6 @@
 {
   "name": "gia-ne",
-  "version": "0.1.14",
+  "version": "0.1.16",
   "description": "CLI wrapper for Image Neurally Enhanced using containerized infrastructure",
   "main": "csm",
   "scripts": {
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/GuillaumeAI/gia-ne#readme",
   "dependencies": {
+    "gia-ne": "^0.1.16",
     "node-cmd": "^4.0.0",
     "node-powershell": "^4.0.0",
     "tlid": "^1.0.9"
