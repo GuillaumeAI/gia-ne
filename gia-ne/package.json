@@ -28,6 +28,7 @@
   "homepage": "https://github.com/GuillaumeAI/gia-ne#readme",
   "dependencies": {
     "node-cmd": "^4.0.0",
-    "node-powershell": "^4.0.0"
+    "node-powershell": "^4.0.0",
+    "tlid": "^1.0.9"
   }
 }
