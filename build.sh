@@ -1,6 +1,6 @@
-export container_tag=guillaumeai/ne:latest
+. _env
 
-docker build -t $container_tag .
-docker push $container_tag
+docker build -t $containertag . && \
+docker push $containertag
 
 
