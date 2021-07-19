@@ -1,4 +1,7 @@
+*.lock
+**/*.lock
 # Logs
+
 logs
 *.log
 npm-debug.log*
